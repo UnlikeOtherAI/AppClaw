@@ -1,4 +1,4 @@
-# UpClaw - Architecture
+# AppClaw - Architecture
 
 ## Design Principles
 

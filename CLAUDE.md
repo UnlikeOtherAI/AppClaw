@@ -1,4 +1,4 @@
-# UpClaw - Project Rules
+# AppClaw - Project Rules
 
 All standards live in `@./AGENTS.md`.
 

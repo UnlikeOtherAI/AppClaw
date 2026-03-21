@@ -1,8 +1,8 @@
-# UpClaw - Project Brief
+# AppClaw - Project Brief
 
 ## Mission
 
-Build free, open-source, native iOS and Android clients for OpenClaw. Every existing mobile client is paid — UpClaw is a community-driven alternative.
+Build free, open-source, native iOS and Android clients for OpenClaw. Every existing mobile client is paid — AppClaw is a community-driven alternative.
 
 ## What is OpenClaw?
 

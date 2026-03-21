@@ -1,4 +1,4 @@
-# UpClaw - Roadmap
+# AppClaw - Roadmap
 
 ## Phase 1: iOS Only
 

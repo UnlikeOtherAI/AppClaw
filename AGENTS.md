@@ -1,8 +1,8 @@
-# UpClaw - Agent Standards
+# AppClaw - Agent Standards
 
 ## Project Overview
 
-UpClaw is a free, open-source, community-driven project building native iOS and Android clients for OpenClaw. All existing options are paid — UpClaw fills that gap.
+AppClaw is a free, open-source, community-driven project building native iOS and Android clients for OpenClaw. All existing options are paid — AppClaw fills that gap.
 
 ## File Size Rules
 

@@ -1,4 +1,4 @@
-# UpClaw - API Reference
+# AppClaw - API Reference
 
 OpenClaw presents three main integration planes relevant to a mobile client:
 

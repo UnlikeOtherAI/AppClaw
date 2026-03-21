@@ -1,10 +1,10 @@
-# UpClaw
+# AppClaw
 
 Free, open-source native iOS and Android clients for [OpenClaw](https://docs.openclaw.ai).
 
 ## Why?
 
-Every existing mobile client for OpenClaw is either paid, unofficial, or internal-only. UpClaw is a community-driven project to build proper native apps that everyone can use.
+Every existing mobile client for OpenClaw is either paid, unofficial, or internal-only. AppClaw is a community-driven project to build proper native apps that everyone can use.
 
 ## Phase 1: iOS
 

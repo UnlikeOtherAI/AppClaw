@@ -1,4 +1,4 @@
-# UpClaw - Sources & References
+# AppClaw - Sources & References
 
 ## Official OpenClaw Resources
 

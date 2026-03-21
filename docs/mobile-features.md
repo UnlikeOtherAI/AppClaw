@@ -1,4 +1,4 @@
-# UpClaw - Priority Native Features
+# AppClaw - Priority Native Features
 
 ## Selection Criteria
 

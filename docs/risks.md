@@ -1,4 +1,4 @@
-# UpClaw - Risks & Mitigations
+# AppClaw - Risks & Mitigations
 
 ## Security & Credential Leakage
 
