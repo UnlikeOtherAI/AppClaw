@@ -1,0 +1,327 @@
+documentType: page
+specVersion: "1.1"
+id: settings
+page:
+  id: settings
+  template: main_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        - id: settings_header
+          component: section
+          layout:
+            type: stack
+            padding: 16
+          children:
+            - id: settings_title
+              component: heading
+              props:
+                label: "Settings"
+                level: 2
+
+        # Appearance
+        - id: appearance_section
+          component: section
+          layout:
+            type: stack
+            gap: 1
+          children:
+            - id: appearance_label
+              component: section
+              layout:
+                type: stack
+                padding: 16
+              children:
+                - id: appearance_heading
+                  component: heading
+                  props:
+                    label: "Appearance"
+                    level: 5
+
+            - id: theme_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: theme_label
+                  component: text
+                  props:
+                    label: "Theme"
+                - id: theme_value
+                  component: text
+                  props:
+                    label: "System"
+
+            - id: font_size_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: font_size_label
+                  component: text
+                  props:
+                    label: "Text Size"
+                - id: font_size_value
+                  component: text
+                  props:
+                    label: "Default"
+
+        - id: divider_1
+          component: divider
+
+        # Notifications
+        - id: notifications_section
+          component: section
+          layout:
+            type: stack
+            gap: 1
+          children:
+            - id: notifications_label
+              component: section
+              layout:
+                type: stack
+                padding: 16
+              children:
+                - id: notifications_heading
+                  component: heading
+                  props:
+                    label: "Notifications"
+                    level: 5
+
+            - id: push_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: push_label
+                  component: text
+                  props:
+                    label: "Push Notifications"
+                - id: push_toggle
+                  component: toggle
+                  props:
+                    label: ""
+
+            - id: reconnect_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: reconnect_label
+                  component: text
+                  props:
+                    label: "Background Reconnect"
+                - id: reconnect_toggle
+                  component: toggle
+                  props:
+                    label: ""
+
+        - id: divider_2
+          component: divider
+
+        # Security
+        - id: security_section
+          component: section
+          layout:
+            type: stack
+            gap: 1
+          children:
+            - id: security_label
+              component: section
+              layout:
+                type: stack
+                padding: 16
+              children:
+                - id: security_heading
+                  component: heading
+                  props:
+                    label: "Security"
+                    level: 5
+
+            - id: biometric_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: biometric_label
+                  component: text
+                  props:
+                    label: "Require Face ID / Touch ID"
+                - id: biometric_toggle
+                  component: toggle
+                  props:
+                    label: ""
+
+            - id: clipboard_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: clipboard_label
+                  component: text
+                  props:
+                    label: "Auto-clear Clipboard"
+                - id: clipboard_toggle
+                  component: toggle
+                  props:
+                    label: ""
+
+        - id: divider_3
+          component: divider
+
+        # Cache
+        - id: cache_section
+          component: section
+          layout:
+            type: stack
+            gap: 1
+          children:
+            - id: cache_label_section
+              component: section
+              layout:
+                type: stack
+                padding: 16
+              children:
+                - id: cache_heading
+                  component: heading
+                  props:
+                    label: "Storage"
+                    level: 5
+
+            - id: cache_size_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: cache_size_label
+                  component: text
+                  props:
+                    label: "Cached Transcripts"
+                - id: cache_size_value
+                  component: text
+                  props:
+                    label: "12.4 MB"
+
+            - id: clear_cache_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: clear_cache_label
+                  component: text
+                  props:
+                    label: "Clear Cache"
+                - id: clear_cache_chevron
+                  component: icon
+                  props:
+                    name: chevron-right
+                    size: sm
+
+        - id: divider_4
+          component: divider
+
+        # About
+        - id: about_section
+          component: section
+          layout:
+            type: stack
+            gap: 1
+          children:
+            - id: about_label_section
+              component: section
+              layout:
+                type: stack
+                padding: 16
+              children:
+                - id: about_heading
+                  component: heading
+                  props:
+                    label: "About"
+                    level: 5
+
+            - id: version_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+              children:
+                - id: version_label
+                  component: text
+                  props:
+                    label: "Version"
+                - id: version_value
+                  component: text
+                  props:
+                    label: "1.0.0 (1)"
+
+            - id: github_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: github_label
+                  component: text
+                  props:
+                    label: "GitHub"
+                - id: github_chevron
+                  component: icon
+                  props:
+                    name: arrow-up-right-from-square
+                    size: sm
+
+            - id: license_row
+              component: section
+              layout:
+                type: row
+                padding: 16
+                justify: space-between
+                align: center
+              children:
+                - id: license_label
+                  component: text
+                  props:
+                    label: "License"
+                - id: license_value
+                  component: text
+                  props:
+                    label: "MIT"

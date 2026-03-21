@@ -1,0 +1,62 @@
+documentType: sitemap
+specVersion: "1.1"
+id: sitemap
+defaultTemplate: main_template
+
+appState:
+  is_connected: false
+  active_gateway: ""
+  active_session_key: ""
+
+routes:
+  # Onboarding flow (no tab bar)
+  - id: welcome
+    path: /welcome
+    page: welcome
+    template: onboarding_template
+
+  - id: qr_scan
+    path: /onboarding/qr
+    page: qr_scan
+    template: onboarding_template
+
+  - id: manual_connect
+    path: /onboarding/manual
+    page: manual_connect
+    template: onboarding_template
+
+  - id: pairing_pending
+    path: /onboarding/pairing
+    page: pairing_pending
+    template: onboarding_template
+
+  # Main app (with tab bar)
+  - id: sessions
+    path: /sessions
+    page: sessions
+    template: main_template
+
+  - id: chat
+    path: /chat
+    page: chat
+    template: chat_template
+
+  - id: chat_settings
+    path: /chat/settings
+    page: chat_settings
+    template: nav_template
+
+  - id: gateways
+    path: /gateways
+    page: gateways
+    template: main_template
+
+  - id: gateway_detail
+    path: /gateways/detail
+    page: gateway_detail
+    template: nav_template
+
+  - id: settings
+    path: /settings
+    page: settings
+    template: main_template

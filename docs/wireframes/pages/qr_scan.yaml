@@ -1,0 +1,86 @@
+documentType: page
+specVersion: "1.1"
+id: qr_scan
+page:
+  id: qr_scan
+  template: onboarding_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        - id: scan_container
+          component: section
+          layout:
+            type: stack
+            padding: 24
+            gap: 24
+            align: center
+          children:
+            - id: scan_title
+              component: heading
+              props:
+                label: "Scan QR Code"
+                level: 3
+            - id: scan_instructions
+              component: paragraph
+              props:
+                label: "Run 'openclaw qr' on your Gateway machine and point your camera at the code."
+
+            - id: camera_viewfinder
+              component: section
+              size:
+                width: 280
+                height: 280
+              layout:
+                type: stack
+                align: center
+              children:
+                - id: viewfinder_placeholder
+                  component: icon
+                  props:
+                    name: camera
+                    size: 2xl
+                - id: viewfinder_label
+                  component: text
+                  props:
+                    label: "Camera Viewfinder"
+
+            - id: scan_hint
+              component: text
+              props:
+                label: "Position the QR code within the frame"
+
+            - id: divider_1
+              component: divider
+
+            - id: alt_paste_section
+              component: section
+              layout:
+                type: stack
+                gap: 12
+                align: center
+              children:
+                - id: or_text
+                  component: text
+                  props:
+                    label: "Or paste a setup code instead"
+                - id: paste_code_btn
+                  component: button
+                  props:
+                    label: "Paste Setup Code"
+                    variant: secondary
+                    icon: clipboard
+                  interaction:
+                    - type: navigation
+                      targetRoute: manual_connect

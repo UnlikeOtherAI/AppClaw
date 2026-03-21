@@ -1,0 +1,277 @@
+documentType: page
+specVersion: "1.1"
+id: chat
+page:
+  id: chat
+  template: chat_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  pageState:
+    is_generating: false
+  slots:
+    - slotId: main
+      content:
+        # Chat messages area
+        - id: messages_area
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 16
+          size:
+            width: "100%"
+          children:
+            # User message 1
+            - id: msg_user_1
+              component: section
+              layout:
+                type: stack
+                gap: 4
+                align: center
+              children:
+                - id: msg_u1_bubble
+                  component: section
+                  layout:
+                    type: stack
+                    padding: 12
+                  children:
+                    - id: msg_u1_text
+                      component: paragraph
+                      props:
+                        label: "Can you help me plan the architecture for a native iOS OpenClaw client?"
+
+            # Agent response 1
+            - id: msg_agent_1
+              component: section
+              layout:
+                type: row
+                gap: 8
+                align: center
+              children:
+                - id: msg_a1_avatar
+                  component: icon
+                  props:
+                    name: robot
+                    size: sm
+                - id: msg_a1_content
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: msg_a1_bubble
+                      component: section
+                      layout:
+                        type: stack
+                        padding: 12
+                      children:
+                        - id: msg_a1_text
+                          component: paragraph
+                          props:
+                            label: "I'd recommend a Clean Architecture approach with three main layers: Domain (entities, use cases), Data (repositories, WebSocket client, local cache), and Presentation (SwiftUI views, ViewModels)."
+                    - id: msg_a1_meta
+                      component: section
+                      layout:
+                        type: row
+                        gap: 12
+                      children:
+                        - id: msg_a1_time
+                          component: text
+                          props:
+                            label: "2:34 PM"
+                        - id: msg_a1_tokens
+                          component: text
+                          props:
+                            label: "247 tokens"
+
+            # User message 2
+            - id: msg_user_2
+              component: section
+              layout:
+                type: stack
+                gap: 4
+                align: center
+              children:
+                - id: msg_u2_bubble
+                  component: section
+                  layout:
+                    type: stack
+                    padding: 12
+                  children:
+                    - id: msg_u2_text
+                      component: paragraph
+                      props:
+                        label: "What about the WebSocket connection handling?"
+
+            # Agent response 2 (streaming)
+            - id: msg_agent_2
+              component: section
+              layout:
+                type: row
+                gap: 8
+                align: center
+              children:
+                - id: msg_a2_avatar
+                  component: icon
+                  props:
+                    name: robot
+                    size: sm
+                - id: msg_a2_content
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: msg_a2_bubble
+                      component: section
+                      layout:
+                        type: stack
+                        padding: 12
+                      children:
+                        - id: msg_a2_text
+                          component: paragraph
+                          props:
+                            label: "The Gateway uses a typed WebSocket protocol. Your connection engine should handle the connect.challenge handshake, device signing..."
+                    - id: streaming_indicator
+                      component: section
+                      layout:
+                        type: row
+                        gap: 8
+                        align: center
+                      children:
+                        - id: typing_dots
+                          component: icon
+                          props:
+                            name: ellipsis
+                            size: sm
+                        - id: typing_label
+                          component: text
+                          props:
+                            label: "Generating..."
+
+        # Input area (fixed bottom)
+        - id: input_area
+          component: section
+          layout:
+            type: row
+            padding: 12
+            gap: 8
+            align: center
+          children:
+            - id: attach_btn
+              component: button
+              props:
+                label: ""
+                icon: image
+                variant: ghost
+            - id: message_input
+              component: input
+              size:
+                width: "100%"
+              props:
+                placeholder: "Message..."
+                type: text
+            - id: send_or_stop
+              component: section
+              children:
+                - id: send_btn
+                  component: button
+                  props:
+                    label: ""
+                    icon: paper-plane
+                    variant: primary
+                  visibility:
+                    condition:
+                      type: state_equals
+                      scope: page
+                      key: is_generating
+                      equals: false
+                - id: stop_btn
+                  component: button
+                  props:
+                    label: ""
+                    icon: stop
+                    variant: secondary
+                  visibility:
+                    condition:
+                      type: state_equals
+                      scope: page
+                      key: is_generating
+                      equals: true
+
+  overlays:
+    - id: chat_actions_menu
+      type: bottom_sheet
+      content:
+        - id: actions_title
+          component: heading
+          props:
+            label: "Session Actions"
+            level: 5
+        - id: action_settings
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 12
+            align: center
+          interaction:
+            - type: close_overlay
+              targetOverlay: chat_actions_menu
+            - type: navigation
+              targetRoute: chat_settings
+          children:
+            - id: action_settings_icon
+              component: icon
+              props:
+                name: sliders
+            - id: action_settings_label
+              component: text
+              props:
+                label: "Session Settings"
+        - id: action_export
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 12
+            align: center
+          children:
+            - id: action_export_icon
+              component: icon
+              props:
+                name: file-export
+            - id: action_export_label
+              component: text
+              props:
+                label: "Export Transcript"
+        - id: action_clear
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 12
+            align: center
+          children:
+            - id: action_clear_icon
+              component: icon
+              props:
+                name: trash
+            - id: action_clear_label
+              component: text
+              props:
+                label: "Clear Session"

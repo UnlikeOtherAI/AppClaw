@@ -1,0 +1,272 @@
+documentType: page
+specVersion: "1.1"
+id: sessions
+page:
+  id: sessions
+  template: main_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  pageState:
+    search_active: false
+  slots:
+    - slotId: main
+      content:
+        # Navigation bar area
+        - id: sessions_nav
+          component: section
+          layout:
+            type: row
+            padding: 16
+            align: center
+            justify: space-between
+          children:
+            - id: sessions_title
+              component: heading
+              props:
+                label: "Sessions"
+                level: 2
+            - id: new_session_btn
+              component: button
+              props:
+                label: ""
+                icon: plus
+                variant: ghost
+
+        # Search bar
+        - id: search_bar
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 8
+            align: center
+          children:
+            - id: search_icon
+              component: icon
+              props:
+                name: magnifying-glass
+                size: sm
+            - id: search_input
+              component: input
+              size:
+                width: "100%"
+              props:
+                placeholder: "Search sessions..."
+                type: text
+
+        # Connection status banner
+        - id: connection_status
+          component: section
+          layout:
+            type: row
+            padding: 12
+            gap: 8
+            align: center
+          children:
+            - id: status_dot
+              component: icon
+              props:
+                name: circle
+                style: solid
+                size: xs
+            - id: status_text
+              component: text
+              props:
+                label: "Connected to Home Gateway"
+
+        # Session list
+        - id: session_list
+          component: section
+          layout:
+            type: stack
+            gap: 1
+          children:
+            - id: session_1
+              component: section
+              layout:
+                type: row
+                padding: 16
+                gap: 12
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: chat
+              children:
+                - id: s1_avatar
+                  component: icon
+                  props:
+                    name: robot
+                    style: solid
+                    size: lg
+                - id: s1_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: s1_title_row
+                      component: section
+                      layout:
+                        type: row
+                        justify: space-between
+                        align: center
+                      children:
+                        - id: s1_title
+                          component: text
+                          props:
+                            label: "iOS app architecture"
+                        - id: s1_time
+                          component: text
+                          props:
+                            label: "2m ago"
+                    - id: s1_preview
+                      component: text
+                      props:
+                        label: "Here's the SwiftUI implementation plan for the..."
+
+            - id: session_2
+              component: section
+              layout:
+                type: row
+                padding: 16
+                gap: 12
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: chat
+              children:
+                - id: s2_avatar
+                  component: icon
+                  props:
+                    name: robot
+                    style: solid
+                    size: lg
+                - id: s2_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: s2_title_row
+                      component: section
+                      layout:
+                        type: row
+                        justify: space-between
+                        align: center
+                      children:
+                        - id: s2_title
+                          component: text
+                          props:
+                            label: "Debug WebSocket issue"
+                        - id: s2_time
+                          component: text
+                          props:
+                            label: "1h ago"
+                    - id: s2_preview
+                      component: text
+                      props:
+                        label: "The connection keeps dropping because the keep-alive..."
+
+            - id: session_3
+              component: section
+              layout:
+                type: row
+                padding: 16
+                gap: 12
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: chat
+              children:
+                - id: s3_avatar
+                  component: icon
+                  props:
+                    name: robot
+                    style: solid
+                    size: lg
+                - id: s3_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: s3_title_row
+                      component: section
+                      layout:
+                        type: row
+                        justify: space-between
+                        align: center
+                      children:
+                        - id: s3_title
+                          component: text
+                          props:
+                            label: "Write release notes"
+                        - id: s3_time
+                          component: text
+                          props:
+                            label: "3h ago"
+                    - id: s3_preview
+                      component: text
+                      props:
+                        label: "v2.1.0 release notes: Added support for multi-agent..."
+
+            - id: session_4
+              component: section
+              layout:
+                type: row
+                padding: 16
+                gap: 12
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: chat
+              children:
+                - id: s4_avatar
+                  component: icon
+                  props:
+                    name: robot
+                    style: solid
+                    size: lg
+                - id: s4_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: s4_title_row
+                      component: section
+                      layout:
+                        type: row
+                        justify: space-between
+                        align: center
+                      children:
+                        - id: s4_title
+                          component: text
+                          props:
+                            label: "Plan weekend automation"
+                        - id: s4_time
+                          component: text
+                          props:
+                            label: "Yesterday"
+                    - id: s4_preview
+                      component: text
+                      props:
+                        label: "I've set up the cron job to run every Saturday at..."

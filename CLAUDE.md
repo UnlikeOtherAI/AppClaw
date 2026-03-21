@@ -9,6 +9,12 @@ All standards live in `@./AGENTS.md`.
 - These limits do NOT apply to JSON or YAML data files
 - If a document must exceed 1,000 lines, split it into a folder with an `overview.md` containing a table of contents and links to sub-sections
 
+## UI & Wireframes
+
+- For any UI-related query, consult the wireframes in `docs/wireframes/` first
+- Wireframes are the source of truth for screen layout, navigation flow, and component structure
+- Build with `wf build` and preview with `wf serve` from the `docs/wireframes/` directory
+
 ## Architecture
 
 - Clean Architecture: domain, data, presentation layers

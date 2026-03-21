@@ -1,0 +1,113 @@
+documentType: templates
+specVersion: "1.1"
+id: templates
+templates:
+  # Onboarding screens - no tab bar, centered content
+  onboarding_template:
+    layout:
+      type: stack
+    regions:
+      - id: onboarding_header
+        kind: persistent
+        layout:
+          type: row
+          padding: 16
+          align: center
+        children:
+          - id: back_button
+            injectable: true
+          - id: onboarding_logo
+            component: heading
+            props:
+              label: "AppClaw"
+              level: 4
+      - id: main
+        kind: slot
+
+  # Main app with bottom tab bar
+  main_template:
+    layout:
+      type: stack
+    regions:
+      - id: main
+        kind: slot
+      - id: tab_bar
+        kind: persistent
+        component: bottom_tab_bar
+        children:
+          - id: tab_sessions
+            component: button
+            props:
+              label: "Sessions"
+              icon: comments
+            interaction:
+              - type: navigation
+                targetRoute: sessions
+          - id: tab_gateways
+            component: button
+            props:
+              label: "Gateways"
+              icon: server
+            interaction:
+              - type: navigation
+                targetRoute: gateways
+          - id: tab_settings
+            component: button
+            props:
+              label: "Settings"
+              icon: gear
+            interaction:
+              - type: navigation
+                targetRoute: settings
+
+  # Chat screen - custom header, no tab bar
+  chat_template:
+    layout:
+      type: stack
+    regions:
+      - id: chat_header
+        kind: persistent
+        layout:
+          type: row
+          padding: 16
+          align: center
+          justify: space-between
+        children:
+          - id: chat_back_btn
+            component: button
+            props:
+              label: "Back"
+              icon: chevron-left
+              variant: ghost
+            interaction:
+              - type: navigation
+                targetRoute: sessions
+          - id: chat_title
+            injectable: true
+          - id: chat_actions
+            injectable: true
+      - id: main
+        kind: slot
+
+  # Simple nav template for detail/settings screens
+  nav_template:
+    layout:
+      type: stack
+    regions:
+      - id: nav_header
+        kind: persistent
+        layout:
+          type: row
+          padding: 16
+          align: center
+        children:
+          - id: nav_back_btn
+            component: button
+            props:
+              label: "Back"
+              icon: chevron-left
+              variant: ghost
+          - id: nav_title
+            injectable: true
+      - id: main
+        kind: slot

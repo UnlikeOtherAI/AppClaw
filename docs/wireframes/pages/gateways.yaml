@@ -1,0 +1,202 @@
+documentType: page
+specVersion: "1.1"
+id: gateways
+page:
+  id: gateways
+  template: main_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        # Header
+        - id: gateways_nav
+          component: section
+          layout:
+            type: row
+            padding: 16
+            align: center
+            justify: space-between
+          children:
+            - id: gateways_title
+              component: heading
+              props:
+                label: "Gateways"
+                level: 2
+            - id: add_gateway_btn
+              component: button
+              props:
+                label: ""
+                icon: plus
+                variant: ghost
+              interaction:
+                - type: navigation
+                  targetRoute: welcome
+
+        # Active gateway
+        - id: active_section_label
+          component: section
+          layout:
+            type: stack
+            padding: 16
+          children:
+            - id: active_label
+              component: heading
+              props:
+                label: "Active"
+                level: 5
+
+        - id: active_gateway
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 12
+            align: center
+          interaction:
+            - type: navigation
+              targetRoute: gateway_detail
+          children:
+            - id: ag_status
+              component: icon
+              props:
+                name: circle
+                style: solid
+                size: sm
+            - id: ag_info
+              component: section
+              layout:
+                type: stack
+                gap: 4
+              size:
+                width: "100%"
+              children:
+                - id: ag_name
+                  component: text
+                  props:
+                    label: "Home Gateway"
+                - id: ag_url
+                  component: text
+                  props:
+                    label: "192.168.1.100:18789"
+                - id: ag_status_text
+                  component: text
+                  props:
+                    label: "Connected - Device paired"
+            - id: ag_chevron
+              component: icon
+              props:
+                name: chevron-right
+                size: sm
+
+        - id: divider_1
+          component: divider
+
+        # Other gateways
+        - id: other_section_label
+          component: section
+          layout:
+            type: stack
+            padding: 16
+          children:
+            - id: other_label
+              component: heading
+              props:
+                label: "Saved"
+                level: 5
+
+        - id: saved_gateway_1
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 12
+            align: center
+          interaction:
+            - type: navigation
+              targetRoute: gateway_detail
+          children:
+            - id: sg1_status
+              component: icon
+              props:
+                name: circle
+                style: regular
+                size: sm
+            - id: sg1_info
+              component: section
+              layout:
+                type: stack
+                gap: 4
+              size:
+                width: "100%"
+              children:
+                - id: sg1_name
+                  component: text
+                  props:
+                    label: "Cloud Gateway"
+                - id: sg1_url
+                  component: text
+                  props:
+                    label: "my-gw.tail1234.ts.net:18789"
+                - id: sg1_status_text
+                  component: text
+                  props:
+                    label: "Disconnected"
+            - id: sg1_chevron
+              component: icon
+              props:
+                name: chevron-right
+                size: sm
+
+        - id: saved_gateway_2
+          component: section
+          layout:
+            type: row
+            padding: 16
+            gap: 12
+            align: center
+          interaction:
+            - type: navigation
+              targetRoute: gateway_detail
+          children:
+            - id: sg2_status
+              component: icon
+              props:
+                name: circle
+                style: regular
+                size: sm
+            - id: sg2_info
+              component: section
+              layout:
+                type: stack
+                gap: 4
+              size:
+                width: "100%"
+              children:
+                - id: sg2_name
+                  component: text
+                  props:
+                    label: "Office Gateway"
+                - id: sg2_url
+                  component: text
+                  props:
+                    label: "10.0.1.50:18789"
+                - id: sg2_status_text
+                  component: text
+                  props:
+                    label: "Disconnected"
+            - id: sg2_chevron
+              component: icon
+              props:
+                name: chevron-right
+                size: sm

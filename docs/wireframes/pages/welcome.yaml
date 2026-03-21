@@ -1,0 +1,173 @@
+documentType: page
+specVersion: "1.1"
+id: welcome
+page:
+  id: welcome
+  template: onboarding_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        - id: welcome_hero
+          component: section
+          layout:
+            type: stack
+            padding: 32
+            gap: 24
+            align: center
+          children:
+            - id: app_icon
+              component: icon
+              props:
+                name: paw
+                style: solid
+                size: 2xl
+            - id: welcome_title
+              component: heading
+              props:
+                label: "Welcome to AppClaw"
+                level: 2
+            - id: welcome_subtitle
+              component: paragraph
+              props:
+                label: "Free, open-source native client for OpenClaw. Connect to your self-hosted Gateway to get started."
+
+        - id: spacer_1
+          component: spacer
+          size:
+            height: 16
+
+        - id: connect_options
+          component: section
+          layout:
+            type: stack
+            gap: 12
+            padding: 16
+          children:
+            - id: qr_option
+              component: section
+              layout:
+                type: row
+                padding: 20
+                gap: 16
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: qr_scan
+              children:
+                - id: qr_icon
+                  component: icon
+                  props:
+                    name: qrcode
+                    size: xl
+                - id: qr_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: qr_title
+                      component: heading
+                      props:
+                        label: "Scan QR Code"
+                        level: 5
+                    - id: qr_desc
+                      component: text
+                      props:
+                        label: "Scan from 'openclaw qr' on your Gateway"
+                - id: qr_chevron
+                  component: icon
+                  props:
+                    name: chevron-right
+                    size: sm
+
+            - id: paste_option
+              component: section
+              layout:
+                type: row
+                padding: 20
+                gap: 16
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: manual_connect
+              children:
+                - id: paste_icon
+                  component: icon
+                  props:
+                    name: clipboard
+                    size: xl
+                - id: paste_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: paste_title
+                      component: heading
+                      props:
+                        label: "Paste Setup Code"
+                        level: 5
+                    - id: paste_desc
+                      component: text
+                      props:
+                        label: "Paste a setup code from a pairing channel"
+                - id: paste_chevron
+                  component: icon
+                  props:
+                    name: chevron-right
+                    size: sm
+
+            - id: manual_option
+              component: section
+              layout:
+                type: row
+                padding: 20
+                gap: 16
+                align: center
+              interaction:
+                - type: navigation
+                  targetRoute: manual_connect
+              children:
+                - id: manual_icon
+                  component: icon
+                  props:
+                    name: keyboard
+                    size: xl
+                - id: manual_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  size:
+                    width: "100%"
+                  children:
+                    - id: manual_title
+                      component: heading
+                      props:
+                        label: "Manual Connection"
+                        level: 5
+                    - id: manual_desc
+                      component: text
+                      props:
+                        label: "Enter Gateway host and port manually"
+                - id: manual_chevron
+                  component: icon
+                  props:
+                    name: chevron-right
+                    size: sm

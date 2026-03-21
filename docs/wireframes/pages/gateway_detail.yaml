@@ -1,0 +1,202 @@
+documentType: page
+specVersion: "1.1"
+id: gateway_detail
+page:
+  id: gateway_detail
+  template: nav_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        - id: gd_title
+          component: section
+          layout:
+            type: stack
+            padding: 16
+          children:
+            - id: gd_heading
+              component: heading
+              props:
+                label: "Gateway Details"
+                level: 3
+
+        # Connection info
+        - id: connection_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 16
+          children:
+            - id: conn_label
+              component: heading
+              props:
+                label: "Connection"
+                level: 5
+
+            - id: name_input
+              component: input
+              props:
+                label: "Name"
+                placeholder: "Home Gateway"
+                type: text
+
+            - id: host_display
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+              children:
+                - id: host_label
+                  component: text
+                  props:
+                    label: "Host"
+                - id: host_value
+                  component: text
+                  props:
+                    label: "192.168.1.100"
+
+            - id: port_display
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+              children:
+                - id: port_label
+                  component: text
+                  props:
+                    label: "Port"
+                - id: port_value
+                  component: text
+                  props:
+                    label: "18789"
+
+            - id: tls_display
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+              children:
+                - id: tls_label
+                  component: text
+                  props:
+                    label: "TLS"
+                - id: tls_value
+                  component: text
+                  props:
+                    label: "Off"
+
+        - id: divider_1
+          component: divider
+
+        # Device info
+        - id: device_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 12
+          children:
+            - id: device_label
+              component: heading
+              props:
+                label: "Device"
+                level: 5
+
+            - id: device_id_row
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+              children:
+                - id: did_label
+                  component: text
+                  props:
+                    label: "Device ID"
+                - id: did_value
+                  component: text
+                  props:
+                    label: "iPhone-A3F2"
+
+            - id: paired_row
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+              children:
+                - id: paired_label
+                  component: text
+                  props:
+                    label: "Paired"
+                - id: paired_value
+                  component: text
+                  props:
+                    label: "Yes"
+
+            - id: token_row
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+              children:
+                - id: token_label
+                  component: text
+                  props:
+                    label: "Device Token"
+                - id: token_value
+                  component: text
+                  props:
+                    label: "dt_****...a3f2"
+
+        - id: divider_2
+          component: divider
+
+        # Actions
+        - id: actions_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 12
+          children:
+            - id: connect_btn
+              component: button
+              props:
+                label: "Connect"
+                variant: primary
+                icon: plug
+              size:
+                width: "100%"
+            - id: rotate_token_btn
+              component: button
+              props:
+                label: "Rotate Device Token"
+                variant: secondary
+                icon: rotate
+              size:
+                width: "100%"
+            - id: remove_btn
+              component: button
+              props:
+                label: "Remove Gateway"
+                variant: ghost
+                icon: trash
+              size:
+                width: "100%"

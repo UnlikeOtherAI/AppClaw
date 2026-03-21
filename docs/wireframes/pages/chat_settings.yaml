@@ -1,0 +1,235 @@
+documentType: page
+specVersion: "1.1"
+id: chat_settings
+page:
+  id: chat_settings
+  template: nav_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        - id: cs_title
+          component: section
+          layout:
+            type: stack
+            padding: 16
+          children:
+            - id: cs_heading
+              component: heading
+              props:
+                label: "Session Settings"
+                level: 3
+
+        # Model / Speed settings
+        - id: speed_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 16
+          children:
+            - id: speed_label
+              component: heading
+              props:
+                label: "Speed & Quality"
+                level: 5
+
+            - id: fast_mode_row
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+                align: center
+              children:
+                - id: fast_mode_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  children:
+                    - id: fast_mode_label
+                      component: text
+                      props:
+                        label: "Fast Mode"
+                    - id: fast_mode_desc
+                      component: text
+                      props:
+                        label: "Faster responses, lower quality"
+                - id: fast_mode_toggle
+                  component: toggle
+                  props:
+                    label: ""
+
+            - id: reasoning_row
+              component: section
+              layout:
+                type: stack
+                padding: 12
+                gap: 8
+              children:
+                - id: reasoning_label
+                  component: text
+                  props:
+                    label: "Reasoning Level"
+                - id: reasoning_select
+                  component: select
+                  props:
+                    label: ""
+                    placeholder: "Select level"
+                    options:
+                      - { value: "off", label: "Off" }
+                      - { value: "low", label: "Low" }
+                      - { value: "medium", label: "Medium" }
+                      - { value: "high", label: "High" }
+
+            - id: thinking_row
+              component: section
+              layout:
+                type: stack
+                padding: 12
+                gap: 8
+              children:
+                - id: thinking_label
+                  component: text
+                  props:
+                    label: "Thinking Level"
+                - id: thinking_select
+                  component: select
+                  props:
+                    label: ""
+                    placeholder: "Select level"
+                    options:
+                      - { value: "off", label: "Off" }
+                      - { value: "low", label: "Low" }
+                      - { value: "medium", label: "Medium" }
+                      - { value: "high", label: "High" }
+
+        - id: divider_1
+          component: divider
+
+        # Display settings
+        - id: display_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 16
+          children:
+            - id: display_label
+              component: heading
+              props:
+                label: "Display"
+                level: 5
+
+            - id: usage_row
+              component: section
+              layout:
+                type: row
+                padding: 12
+                justify: space-between
+                align: center
+              children:
+                - id: usage_info
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 4
+                  children:
+                    - id: usage_label
+                      component: text
+                      props:
+                        label: "Show Token Usage"
+                    - id: usage_desc
+                      component: text
+                      props:
+                        label: "Display token counts per message"
+                - id: usage_toggle
+                  component: toggle
+                  props:
+                    label: ""
+
+            - id: verbose_row
+              component: section
+              layout:
+                type: stack
+                padding: 12
+                gap: 8
+              children:
+                - id: verbose_label
+                  component: text
+                  props:
+                    label: "Verbose Level"
+                - id: verbose_select
+                  component: select
+                  props:
+                    label: ""
+                    placeholder: "Select level"
+                    options:
+                      - { value: "off", label: "Off" }
+                      - { value: "normal", label: "Normal" }
+                      - { value: "detailed", label: "Detailed" }
+
+        - id: divider_2
+          component: divider
+
+        # Session info
+        - id: info_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 12
+          children:
+            - id: info_label
+              component: heading
+              props:
+                label: "Session Info"
+                level: 5
+            - id: session_key_row
+              component: section
+              layout:
+                type: row
+                justify: space-between
+                padding: 8
+              children:
+                - id: sk_label
+                  component: text
+                  props:
+                    label: "Session Key"
+                - id: sk_value
+                  component: text
+                  props:
+                    label: "agent:main:web"
+            - id: agent_row
+              component: section
+              layout:
+                type: row
+                justify: space-between
+                padding: 8
+              children:
+                - id: agent_label
+                  component: text
+                  props:
+                    label: "Agent"
+                - id: agent_value
+                  component: text
+                  props:
+                    label: "default"
+            - id: label_input
+              component: input
+              props:
+                label: "Session Label"
+                placeholder: "Optional label..."
+                type: text
