@@ -23,6 +23,12 @@ AppClaw is a free, open-source, community-driven project building native iOS and
 - Every feature must be visually verified through AppReveal before it's considered done
 - Test against a real OpenClaw instance
 
+## Wireframes
+
+- After ANY wireframe change, rebuild (`wf build`) and verify with Playwright before committing
+- Check that text content renders (not default "Heading"), tab bars are present, and navigation works
+- Run `wf validate` before building — fix all errors
+
 ## Code Standards
 
 - Minimum complexity, no premature abstractions
