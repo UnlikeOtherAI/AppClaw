@@ -28,7 +28,7 @@ page:
             - id: settings_title
               component: heading
               props:
-                label: "Settings"
+                text: "Settings"
                 level: 2
 
         # Appearance
@@ -47,7 +47,7 @@ page:
                 - id: appearance_heading
                   component: heading
                   props:
-                    label: "Appearance"
+                    text: "Appearance"
                     level: 5
 
             - id: theme_row
@@ -61,11 +61,11 @@ page:
                 - id: theme_label
                   component: text
                   props:
-                    label: "Theme"
+                    text: "Theme"
                 - id: theme_value
                   component: text
                   props:
-                    label: "System"
+                    text: "System"
 
             - id: font_size_row
               component: section
@@ -78,11 +78,11 @@ page:
                 - id: font_size_label
                   component: text
                   props:
-                    label: "Text Size"
+                    text: "Text Size"
                 - id: font_size_value
                   component: text
                   props:
-                    label: "Default"
+                    text: "Default"
 
         - id: divider_1
           component: divider
@@ -103,7 +103,7 @@ page:
                 - id: notifications_heading
                   component: heading
                   props:
-                    label: "Notifications"
+                    text: "Notifications"
                     level: 5
 
             - id: push_row
@@ -117,7 +117,7 @@ page:
                 - id: push_label
                   component: text
                   props:
-                    label: "Push Notifications"
+                    text: "Push Notifications"
                 - id: push_toggle
                   component: toggle
                   props:
@@ -134,7 +134,7 @@ page:
                 - id: reconnect_label
                   component: text
                   props:
-                    label: "Background Reconnect"
+                    text: "Background Reconnect"
                 - id: reconnect_toggle
                   component: toggle
                   props:
@@ -159,7 +159,7 @@ page:
                 - id: security_heading
                   component: heading
                   props:
-                    label: "Security"
+                    text: "Security"
                     level: 5
 
             - id: biometric_row
@@ -173,7 +173,7 @@ page:
                 - id: biometric_label
                   component: text
                   props:
-                    label: "Require Face ID / Touch ID"
+                    text: "Require Face ID / Touch ID"
                 - id: biometric_toggle
                   component: toggle
                   props:
@@ -190,7 +190,7 @@ page:
                 - id: clipboard_label
                   component: text
                   props:
-                    label: "Auto-clear Clipboard"
+                    text: "Auto-clear Clipboard"
                 - id: clipboard_toggle
                   component: toggle
                   props:
@@ -215,7 +215,7 @@ page:
                 - id: cache_heading
                   component: heading
                   props:
-                    label: "Storage"
+                    text: "Storage"
                     level: 5
 
             - id: cache_size_row
@@ -229,11 +229,11 @@ page:
                 - id: cache_size_label
                   component: text
                   props:
-                    label: "Cached Transcripts"
+                    text: "Cached Transcripts"
                 - id: cache_size_value
                   component: text
                   props:
-                    label: "12.4 MB"
+                    text: "12.4 MB"
 
             - id: clear_cache_row
               component: section
@@ -246,7 +246,7 @@ page:
                 - id: clear_cache_label
                   component: text
                   props:
-                    label: "Clear Cache"
+                    text: "Clear Cache"
                 - id: clear_cache_chevron
                   component: icon
                   props:
@@ -272,7 +272,7 @@ page:
                 - id: about_heading
                   component: heading
                   props:
-                    label: "About"
+                    text: "About"
                     level: 5
 
             - id: version_row
@@ -285,11 +285,11 @@ page:
                 - id: version_label
                   component: text
                   props:
-                    label: "Version"
+                    text: "Version"
                 - id: version_value
                   component: text
                   props:
-                    label: "1.0.0 (1)"
+                    text: "1.0.0 (1)"
 
             - id: github_row
               component: section
@@ -302,7 +302,7 @@ page:
                 - id: github_label
                   component: text
                   props:
-                    label: "GitHub"
+                    text: "GitHub"
                 - id: github_chevron
                   component: icon
                   props:
@@ -320,8 +320,8 @@ page:
                 - id: license_label
                   component: text
                   props:
-                    label: "License"
+                    text: "License"
                 - id: license_value
                   component: text
                   props:
-                    label: "MIT"
+                    text: "MIT"

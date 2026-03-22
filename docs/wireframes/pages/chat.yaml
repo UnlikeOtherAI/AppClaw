@@ -48,7 +48,7 @@ page:
                     - id: msg_u1_text
                       component: paragraph
                       props:
-                        label: "Can you help me plan the architecture for a native iOS OpenClaw client?"
+                        text: "Can you help me plan the architecture for a native iOS OpenClaw client?"
 
             # Agent response 1
             - id: msg_agent_1
@@ -80,7 +80,7 @@ page:
                         - id: msg_a1_text
                           component: paragraph
                           props:
-                            label: "I'd recommend a Clean Architecture approach with three main layers: Domain (entities, use cases), Data (repositories, WebSocket client, local cache), and Presentation (SwiftUI views, ViewModels)."
+                            text: "I'd recommend a Clean Architecture approach with three main layers: Domain (entities, use cases), Data (repositories, WebSocket client, local cache), and Presentation (SwiftUI views, ViewModels)."
                     - id: msg_a1_meta
                       component: section
                       layout:
@@ -90,11 +90,11 @@ page:
                         - id: msg_a1_time
                           component: text
                           props:
-                            label: "2:34 PM"
+                            text: "2:34 PM"
                         - id: msg_a1_tokens
                           component: text
                           props:
-                            label: "247 tokens"
+                            text: "247 tokens"
 
             # User message 2
             - id: msg_user_2
@@ -113,7 +113,7 @@ page:
                     - id: msg_u2_text
                       component: paragraph
                       props:
-                        label: "What about the WebSocket connection handling?"
+                        text: "What about the WebSocket connection handling?"
 
             # Agent response 2 (streaming)
             - id: msg_agent_2
@@ -145,7 +145,7 @@ page:
                         - id: msg_a2_text
                           component: paragraph
                           props:
-                            label: "The Gateway uses a typed WebSocket protocol. Your connection engine should handle the connect.challenge handshake, device signing..."
+                            text: "The Gateway uses a typed WebSocket protocol. Your connection engine should handle the connect.challenge handshake, device signing..."
                     - id: streaming_indicator
                       component: section
                       layout:
@@ -161,7 +161,7 @@ page:
                         - id: typing_label
                           component: text
                           props:
-                            label: "Generating..."
+                            text: "Generating..."
 
         # Input area (fixed bottom)
         - id: input_area
@@ -220,7 +220,7 @@ page:
         - id: actions_title
           component: heading
           props:
-            label: "Session Actions"
+            text: "Session Actions"
             level: 5
         - id: action_settings
           component: section
@@ -242,7 +242,7 @@ page:
             - id: action_settings_label
               component: text
               props:
-                label: "Session Settings"
+                text: "Session Settings"
         - id: action_export
           component: section
           layout:
@@ -258,7 +258,7 @@ page:
             - id: action_export_label
               component: text
               props:
-                label: "Export Transcript"
+                text: "Export Transcript"
         - id: action_clear
           component: section
           layout:
@@ -274,4 +274,4 @@ page:
             - id: action_clear_label
               component: text
               props:
-                label: "Clear Session"
+                text: "Clear Session"

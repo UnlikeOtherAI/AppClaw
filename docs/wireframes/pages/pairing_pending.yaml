@@ -37,13 +37,13 @@ page:
             - id: pairing_title
               component: heading
               props:
-                label: "Waiting for Approval"
+                text: "Waiting for Approval"
                 level: 3
 
             - id: pairing_desc
               component: paragraph
               props:
-                label: "Your device is requesting to pair with the Gateway. Approve the pairing request on your Gateway to continue."
+                text: "Your device is requesting to pair with the Gateway. Approve the pairing request on your Gateway to continue."
 
             - id: pairing_info_card
               component: section
@@ -63,11 +63,11 @@ page:
                     - id: device_id_label
                       component: text
                       props:
-                        label: "Device ID"
+                        text: "Device ID"
                     - id: device_id_value
                       component: text
                       props:
-                        label: "iPhone-A3F2"
+                        text: "iPhone-A3F2"
                 - id: request_id_row
                   component: section
                   layout:
@@ -77,11 +77,11 @@ page:
                     - id: request_id_label
                       component: text
                       props:
-                        label: "Request ID"
+                        text: "Request ID"
                     - id: request_id_value
                       component: text
                       props:
-                        label: "req_8k2m..."
+                        text: "req_8k2m..."
                 - id: gateway_row
                   component: section
                   layout:
@@ -91,11 +91,11 @@ page:
                     - id: gateway_label
                       component: text
                       props:
-                        label: "Gateway"
+                        text: "Gateway"
                     - id: gateway_value
                       component: text
                       props:
-                        label: "192.168.1.100"
+                        text: "192.168.1.100"
 
             - id: approval_instructions
               component: section
@@ -107,20 +107,20 @@ page:
                 - id: how_to_approve
                   component: heading
                   props:
-                    label: "How to approve"
+                    text: "How to approve"
                     level: 6
                 - id: approve_step_1
                   component: text
                   props:
-                    label: "1. Open terminal on your Gateway machine"
+                    text: "1. Open terminal on your Gateway machine"
                 - id: approve_step_2
                   component: text
                   props:
-                    label: "2. The pairing prompt will appear automatically"
+                    text: "2. The pairing prompt will appear automatically"
                 - id: approve_step_3
                   component: text
                   props:
-                    label: "3. Type 'yes' to approve this device"
+                    text: "3. Type 'yes' to approve this device"
 
             - id: cancel_btn
               component: button

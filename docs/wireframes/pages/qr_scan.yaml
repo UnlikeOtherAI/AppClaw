@@ -30,12 +30,12 @@ page:
             - id: scan_title
               component: heading
               props:
-                label: "Scan QR Code"
+                text: "Scan QR Code"
                 level: 3
             - id: scan_instructions
               component: paragraph
               props:
-                label: "Run 'openclaw qr' on your Gateway machine and point your camera at the code."
+                text: "Run 'openclaw qr' on your Gateway machine and point your camera at the code."
 
             - id: camera_viewfinder
               component: section
@@ -54,12 +54,12 @@ page:
                 - id: viewfinder_label
                   component: text
                   props:
-                    label: "Camera Viewfinder"
+                    text: "Camera Viewfinder"
 
             - id: scan_hint
               component: text
               props:
-                label: "Position the QR code within the frame"
+                text: "Position the QR code within the frame"
 
             - id: divider_1
               component: divider
@@ -74,7 +74,7 @@ page:
                 - id: or_text
                   component: text
                   props:
-                    label: "Or paste a setup code instead"
+                    text: "Or paste a setup code instead"
                 - id: paste_code_btn
                   component: button
                   props:

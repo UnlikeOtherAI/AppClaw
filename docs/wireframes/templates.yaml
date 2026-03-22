@@ -19,7 +19,7 @@ templates:
           - id: onboarding_logo
             component: heading
             props:
-              label: "AppClaw"
+              text: "AppClaw"
               level: 4
       - id: main
         kind: slot

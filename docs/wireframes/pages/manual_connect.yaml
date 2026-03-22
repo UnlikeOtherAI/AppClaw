@@ -31,7 +31,7 @@ page:
             - id: connect_title
               component: heading
               props:
-                label: "Connect to Gateway"
+                text: "Connect to Gateway"
                 level: 3
 
             - id: mode_tabs
@@ -72,7 +72,7 @@ page:
                 - id: paste_instructions
                   component: paragraph
                   props:
-                    label: "Paste the setup code from your Gateway pairing channel (e.g., Telegram /pair command)."
+                    text: "Paste the setup code from your Gateway pairing channel (e.g., Telegram /pair command)."
                 - id: setup_code_input
                   component: textarea
                   props:
@@ -94,7 +94,7 @@ page:
                     - id: warning_text
                       component: text
                       props:
-                        label: "Setup codes are sensitive. Do not share them in screenshots or chats."
+                        text: "Setup codes are sensitive. Do not share them in screenshots or chats."
                 - id: paste_connect_btn
                   component: button
                   props:

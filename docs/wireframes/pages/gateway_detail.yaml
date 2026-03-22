@@ -28,7 +28,7 @@ page:
             - id: gd_heading
               component: heading
               props:
-                label: "Gateway Details"
+                text: "Gateway Details"
                 level: 3
 
         # Connection info
@@ -42,7 +42,7 @@ page:
             - id: conn_label
               component: heading
               props:
-                label: "Connection"
+                text: "Connection"
                 level: 5
 
             - id: name_input
@@ -62,11 +62,11 @@ page:
                 - id: host_label
                   component: text
                   props:
-                    label: "Host"
+                    text: "Host"
                 - id: host_value
                   component: text
                   props:
-                    label: "192.168.1.100"
+                    text: "192.168.1.100"
 
             - id: port_display
               component: section
@@ -78,11 +78,11 @@ page:
                 - id: port_label
                   component: text
                   props:
-                    label: "Port"
+                    text: "Port"
                 - id: port_value
                   component: text
                   props:
-                    label: "18789"
+                    text: "18789"
 
             - id: tls_display
               component: section
@@ -94,11 +94,11 @@ page:
                 - id: tls_label
                   component: text
                   props:
-                    label: "TLS"
+                    text: "TLS"
                 - id: tls_value
                   component: text
                   props:
-                    label: "Off"
+                    text: "Off"
 
         - id: divider_1
           component: divider
@@ -114,7 +114,7 @@ page:
             - id: device_label
               component: heading
               props:
-                label: "Device"
+                text: "Device"
                 level: 5
 
             - id: device_id_row
@@ -127,11 +127,11 @@ page:
                 - id: did_label
                   component: text
                   props:
-                    label: "Device ID"
+                    text: "Device ID"
                 - id: did_value
                   component: text
                   props:
-                    label: "iPhone-A3F2"
+                    text: "iPhone-A3F2"
 
             - id: paired_row
               component: section
@@ -143,11 +143,11 @@ page:
                 - id: paired_label
                   component: text
                   props:
-                    label: "Paired"
+                    text: "Paired"
                 - id: paired_value
                   component: text
                   props:
-                    label: "Yes"
+                    text: "Yes"
 
             - id: token_row
               component: section
@@ -159,11 +159,11 @@ page:
                 - id: token_label
                   component: text
                   props:
-                    label: "Device Token"
+                    text: "Device Token"
                 - id: token_value
                   component: text
                   props:
-                    label: "dt_****...a3f2"
+                    text: "dt_****...a3f2"
 
         - id: divider_2
           component: divider

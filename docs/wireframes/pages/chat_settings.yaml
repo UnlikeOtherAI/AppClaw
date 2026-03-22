@@ -28,7 +28,7 @@ page:
             - id: cs_heading
               component: heading
               props:
-                label: "Session Settings"
+                text: "Session Settings"
                 level: 3
 
         # Model / Speed settings
@@ -42,7 +42,7 @@ page:
             - id: speed_label
               component: heading
               props:
-                label: "Speed & Quality"
+                text: "Speed & Quality"
                 level: 5
 
             - id: fast_mode_row
@@ -62,11 +62,11 @@ page:
                     - id: fast_mode_label
                       component: text
                       props:
-                        label: "Fast Mode"
+                        text: "Fast Mode"
                     - id: fast_mode_desc
                       component: text
                       props:
-                        label: "Faster responses, lower quality"
+                        text: "Faster responses, lower quality"
                 - id: fast_mode_toggle
                   component: toggle
                   props:
@@ -82,7 +82,7 @@ page:
                 - id: reasoning_label
                   component: text
                   props:
-                    label: "Reasoning Level"
+                    text: "Reasoning Level"
                 - id: reasoning_select
                   component: select
                   props:
@@ -104,7 +104,7 @@ page:
                 - id: thinking_label
                   component: text
                   props:
-                    label: "Thinking Level"
+                    text: "Thinking Level"
                 - id: thinking_select
                   component: select
                   props:
@@ -130,7 +130,7 @@ page:
             - id: display_label
               component: heading
               props:
-                label: "Display"
+                text: "Display"
                 level: 5
 
             - id: usage_row
@@ -150,11 +150,11 @@ page:
                     - id: usage_label
                       component: text
                       props:
-                        label: "Show Token Usage"
+                        text: "Show Token Usage"
                     - id: usage_desc
                       component: text
                       props:
-                        label: "Display token counts per message"
+                        text: "Display token counts per message"
                 - id: usage_toggle
                   component: toggle
                   props:
@@ -170,7 +170,7 @@ page:
                 - id: verbose_label
                   component: text
                   props:
-                    label: "Verbose Level"
+                    text: "Verbose Level"
                 - id: verbose_select
                   component: select
                   props:
@@ -195,7 +195,7 @@ page:
             - id: info_label
               component: heading
               props:
-                label: "Session Info"
+                text: "Session Info"
                 level: 5
             - id: session_key_row
               component: section
@@ -207,11 +207,11 @@ page:
                 - id: sk_label
                   component: text
                   props:
-                    label: "Session Key"
+                    text: "Session Key"
                 - id: sk_value
                   component: text
                   props:
-                    label: "agent:main:web"
+                    text: "agent:main:web"
             - id: agent_row
               component: section
               layout:
@@ -222,11 +222,11 @@ page:
                 - id: agent_label
                   component: text
                   props:
-                    label: "Agent"
+                    text: "Agent"
                 - id: agent_value
                   component: text
                   props:
-                    label: "default"
+                    text: "default"
             - id: label_input
               component: input
               props:

@@ -33,7 +33,7 @@ page:
             - id: sessions_title
               component: heading
               props:
-                label: "Sessions"
+                text: "Sessions"
                 level: 2
             - id: new_session_btn
               component: button
@@ -82,7 +82,7 @@ page:
             - id: status_text
               component: text
               props:
-                label: "Connected to Home Gateway"
+                text: "Connected to Home Gateway"
 
         # Session list
         - id: session_list
@@ -126,15 +126,15 @@ page:
                         - id: s1_title
                           component: text
                           props:
-                            label: "iOS app architecture"
+                            text: "iOS app architecture"
                         - id: s1_time
                           component: text
                           props:
-                            label: "2m ago"
+                            text: "2m ago"
                     - id: s1_preview
                       component: text
                       props:
-                        label: "Here's the SwiftUI implementation plan for the..."
+                        text: "Here's the SwiftUI implementation plan for the..."
 
             - id: session_2
               component: section
@@ -171,15 +171,15 @@ page:
                         - id: s2_title
                           component: text
                           props:
-                            label: "Debug WebSocket issue"
+                            text: "Debug WebSocket issue"
                         - id: s2_time
                           component: text
                           props:
-                            label: "1h ago"
+                            text: "1h ago"
                     - id: s2_preview
                       component: text
                       props:
-                        label: "The connection keeps dropping because the keep-alive..."
+                        text: "The connection keeps dropping because the keep-alive..."
 
             - id: session_3
               component: section
@@ -216,15 +216,15 @@ page:
                         - id: s3_title
                           component: text
                           props:
-                            label: "Write release notes"
+                            text: "Write release notes"
                         - id: s3_time
                           component: text
                           props:
-                            label: "3h ago"
+                            text: "3h ago"
                     - id: s3_preview
                       component: text
                       props:
-                        label: "v2.1.0 release notes: Added support for multi-agent..."
+                        text: "v2.1.0 release notes: Added support for multi-agent..."
 
             - id: session_4
               component: section
@@ -261,12 +261,12 @@ page:
                         - id: s4_title
                           component: text
                           props:
-                            label: "Plan weekend automation"
+                            text: "Plan weekend automation"
                         - id: s4_time
                           component: text
                           props:
-                            label: "Yesterday"
+                            text: "Yesterday"
                     - id: s4_preview
                       component: text
                       props:
-                        label: "I've set up the cron job to run every Saturday at..."
+                        text: "I've set up the cron job to run every Saturday at..."

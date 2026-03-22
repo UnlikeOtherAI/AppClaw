@@ -31,7 +31,7 @@ page:
             - id: gateways_title
               component: heading
               props:
-                label: "Gateways"
+                text: "Gateways"
                 level: 2
             - id: add_gateway_btn
               component: button
@@ -53,7 +53,7 @@ page:
             - id: active_label
               component: heading
               props:
-                label: "Active"
+                text: "Active"
                 level: 5
 
         - id: active_gateway
@@ -84,15 +84,15 @@ page:
                 - id: ag_name
                   component: text
                   props:
-                    label: "Home Gateway"
+                    text: "Home Gateway"
                 - id: ag_url
                   component: text
                   props:
-                    label: "192.168.1.100:18789"
+                    text: "192.168.1.100:18789"
                 - id: ag_status_text
                   component: text
                   props:
-                    label: "Connected - Device paired"
+                    text: "Connected - Device paired"
             - id: ag_chevron
               component: icon
               props:
@@ -112,7 +112,7 @@ page:
             - id: other_label
               component: heading
               props:
-                label: "Saved"
+                text: "Saved"
                 level: 5
 
         - id: saved_gateway_1
@@ -143,15 +143,15 @@ page:
                 - id: sg1_name
                   component: text
                   props:
-                    label: "Cloud Gateway"
+                    text: "Cloud Gateway"
                 - id: sg1_url
                   component: text
                   props:
-                    label: "my-gw.tail1234.ts.net:18789"
+                    text: "my-gw.tail1234.ts.net:18789"
                 - id: sg1_status_text
                   component: text
                   props:
-                    label: "Disconnected"
+                    text: "Disconnected"
             - id: sg1_chevron
               component: icon
               props:
@@ -186,15 +186,15 @@ page:
                 - id: sg2_name
                   component: text
                   props:
-                    label: "Office Gateway"
+                    text: "Office Gateway"
                 - id: sg2_url
                   component: text
                   props:
-                    label: "10.0.1.50:18789"
+                    text: "10.0.1.50:18789"
                 - id: sg2_status_text
                   component: text
                   props:
-                    label: "Disconnected"
+                    text: "Disconnected"
             - id: sg2_chevron
               component: icon
               props:

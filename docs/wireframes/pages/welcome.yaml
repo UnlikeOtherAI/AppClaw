@@ -36,12 +36,12 @@ page:
             - id: welcome_title
               component: heading
               props:
-                label: "Welcome to AppClaw"
+                text: "Welcome to AppClaw"
                 level: 2
             - id: welcome_subtitle
               component: paragraph
               props:
-                label: "Free, open-source native client for OpenClaw. Connect to your self-hosted Gateway to get started."
+                text: "Free, open-source native client for OpenClaw. Connect to your self-hosted Gateway to get started."
 
         - id: spacer_1
           component: spacer
@@ -82,12 +82,12 @@ page:
                     - id: qr_title
                       component: heading
                       props:
-                        label: "Scan QR Code"
+                        text: "Scan QR Code"
                         level: 5
                     - id: qr_desc
                       component: text
                       props:
-                        label: "Scan from 'openclaw qr' on your Gateway"
+                        text: "Scan from 'openclaw qr' on your Gateway"
                 - id: qr_chevron
                   component: icon
                   props:
@@ -121,12 +121,12 @@ page:
                     - id: paste_title
                       component: heading
                       props:
-                        label: "Paste Setup Code"
+                        text: "Paste Setup Code"
                         level: 5
                     - id: paste_desc
                       component: text
                       props:
-                        label: "Paste a setup code from a pairing channel"
+                        text: "Paste a setup code from a pairing channel"
                 - id: paste_chevron
                   component: icon
                   props:
@@ -160,12 +160,12 @@ page:
                     - id: manual_title
                       component: heading
                       props:
-                        label: "Manual Connection"
+                        text: "Manual Connection"
                         level: 5
                     - id: manual_desc
                       component: text
                       props:
-                        label: "Enter Gateway host and port manually"
+                        text: "Enter Gateway host and port manually"
                 - id: manual_chevron
                   component: icon
                   props:
