@@ -34,7 +34,7 @@ page:
             - id: help_intro
               component: paragraph
               props:
-                text: "To access your OpenClaw Gateway from outside your home network, you need a secure tunnel. Here are two recommended options."
+                text: "To access your OpenClaw Gateway from outside your home or work network, you need a secure tunnel. Here are two recommended options."
 
         # Pangolin (first — easier)
         - id: pangolin_section
@@ -75,7 +75,7 @@ page:
             - id: pangolin_desc
               component: paragraph
               props:
-                text: "Pangolin is a self-hosted tunneled reverse proxy with built-in identity management. It creates secure tunnels to your home services without exposing ports or configuring your router."
+                text: "Pangolin is a self-hosted tunneled reverse proxy with built-in identity management. It creates secure tunnels to your home or work services without exposing ports or configuring your router."
 
             - id: pangolin_steps_title
               component: heading
@@ -174,7 +174,7 @@ page:
             - id: twingate_desc
               component: paragraph
               props:
-                text: "TwinGate provides zero-trust network access to your home services. It works like a modern VPN but without the complexity — your Gateway appears as if it's on your local network from anywhere."
+                text: "TwinGate provides zero-trust network access to your home or work services. It works like a modern VPN but without the complexity — your Gateway appears as if it's on your local network from anywhere."
 
             - id: twingate_steps_title
               component: heading
