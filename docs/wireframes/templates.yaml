@@ -31,34 +31,36 @@ templates:
     regions:
       - id: main
         kind: slot
-      - id: tab_bar
+      - id: tab_bar_region
         kind: persistent
-        component: bottom_tab_bar
         children:
-          - id: tab_sessions
-            component: button
-            props:
-              label: "Sessions"
-              icon: comments
-            interaction:
-              - type: navigation
-                targetRoute: sessions
-          - id: tab_gateways
-            component: button
-            props:
-              label: "Gateways"
-              icon: server
-            interaction:
-              - type: navigation
-                targetRoute: gateways
-          - id: tab_settings
-            component: button
-            props:
-              label: "Settings"
-              icon: gear
-            interaction:
-              - type: navigation
-                targetRoute: settings
+          - id: tab_bar
+            component: bottom_tab_bar
+            children:
+              - id: tab_sessions
+                component: button
+                props:
+                  label: "Sessions"
+                  icon: comments
+                interaction:
+                  - type: navigation
+                    targetRoute: sessions
+              - id: tab_gateways
+                component: button
+                props:
+                  label: "Gateways"
+                  icon: server
+                interaction:
+                  - type: navigation
+                    targetRoute: gateways
+              - id: tab_settings
+                component: button
+                props:
+                  label: "Settings"
+                  icon: gear
+                interaction:
+                  - type: navigation
+                    targetRoute: settings
 
   # Chat screen - custom header, no tab bar
   chat_template:
