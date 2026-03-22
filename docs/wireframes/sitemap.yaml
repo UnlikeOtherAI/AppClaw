@@ -56,6 +56,11 @@ routes:
     page: gateway_detail
     template: nav_template
 
+  - id: remote_access_help
+    path: /gateways/remote-access
+    page: remote_access_help
+    template: nav_template
+
   - id: settings
     path: /settings
     page: settings

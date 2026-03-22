@@ -1,0 +1,232 @@
+documentType: page
+specVersion: "1.1"
+id: remote_access_help
+page:
+  id: remote_access_help
+  template: nav_template
+  viewport:
+    device: mobile
+    orientation: portrait
+  rendering:
+    mode: card
+  wireframeStyle:
+    border:
+      style: solid
+      width: thin
+    corner:
+      style: rounded
+      radius: 12
+  slots:
+    - slotId: main
+      content:
+        - id: help_header
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 8
+          children:
+            - id: help_title
+              component: heading
+              props:
+                text: "Remote Access"
+                level: 3
+            - id: help_intro
+              component: paragraph
+              props:
+                text: "To access your OpenClaw Gateway from outside your home network, you need a secure tunnel. Here are two recommended options."
+
+        # Pangolin (first — easier)
+        - id: pangolin_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 12
+          children:
+            - id: pangolin_header
+              component: section
+              layout:
+                type: row
+                gap: 12
+                align: center
+              children:
+                - id: pangolin_icon
+                  component: icon
+                  props:
+                    name: shield-halved
+                    size: xl
+                - id: pangolin_title_area
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 2
+                  children:
+                    - id: pangolin_name
+                      component: heading
+                      props:
+                        text: "Pangolin"
+                        level: 4
+                    - id: pangolin_tagline
+                      component: text
+                      props:
+                        text: "Recommended — easiest setup"
+
+            - id: pangolin_desc
+              component: paragraph
+              props:
+                text: "Pangolin is a self-hosted tunneled reverse proxy with built-in identity management. It creates secure tunnels to your home services without exposing ports or configuring your router."
+
+            - id: pangolin_steps_title
+              component: heading
+              props:
+                text: "Quick Setup"
+                level: 5
+
+            - id: pangolin_step_1
+              component: text
+              props:
+                text: "1. Install Pangolin on a cheap VPS (e.g., Oracle Free Tier)"
+
+            - id: pangolin_step_2
+              component: text
+              props:
+                text: "2. Install the Newt agent on your Gateway machine"
+
+            - id: pangolin_step_3
+              component: text
+              props:
+                text: "3. Add a tunnel pointing to localhost:18789"
+
+            - id: pangolin_step_4
+              component: text
+              props:
+                text: "4. Use the public URL in AppClaw to connect"
+
+            - id: pangolin_pros
+              component: section
+              layout:
+                type: stack
+                gap: 4
+                padding: 12
+              children:
+                - id: pangolin_pros_title
+                  component: heading
+                  props:
+                    text: "Pros"
+                    level: 6
+                - id: pangolin_pro_1
+                  component: text
+                  props:
+                    text: "Self-hosted — you own everything"
+                - id: pangolin_pro_2
+                  component: text
+                  props:
+                    text: "Free (runs on free-tier VPS)"
+                - id: pangolin_pro_3
+                  component: text
+                  props:
+                    text: "Built-in auth and identity management"
+                - id: pangolin_pro_4
+                  component: text
+                  props:
+                    text: "Simple single-binary install"
+
+        - id: divider_1
+          component: divider
+
+        # TwinGate
+        - id: twingate_section
+          component: section
+          layout:
+            type: stack
+            padding: 16
+            gap: 12
+          children:
+            - id: twingate_header
+              component: section
+              layout:
+                type: row
+                gap: 12
+                align: center
+              children:
+                - id: twingate_icon
+                  component: icon
+                  props:
+                    name: network-wired
+                    size: xl
+                - id: twingate_title_area
+                  component: section
+                  layout:
+                    type: stack
+                    gap: 2
+                  children:
+                    - id: twingate_name
+                      component: heading
+                      props:
+                        text: "TwinGate"
+                        level: 4
+                    - id: twingate_tagline
+                      component: text
+                      props:
+                        text: "Zero-trust network access"
+
+            - id: twingate_desc
+              component: paragraph
+              props:
+                text: "TwinGate provides zero-trust network access to your home services. It works like a modern VPN but without the complexity — your Gateway appears as if it's on your local network from anywhere."
+
+            - id: twingate_steps_title
+              component: heading
+              props:
+                text: "Quick Setup"
+                level: 5
+
+            - id: twingate_step_1
+              component: text
+              props:
+                text: "1. Create a free TwinGate account at twingate.com"
+
+            - id: twingate_step_2
+              component: text
+              props:
+                text: "2. Install the TwinGate connector on your Gateway machine"
+
+            - id: twingate_step_3
+              component: text
+              props:
+                text: "3. Add a resource for your Gateway (localhost:18789)"
+
+            - id: twingate_step_4
+              component: text
+              props:
+                text: "4. Install TwinGate client on your phone and connect"
+
+            - id: twingate_pros
+              component: section
+              layout:
+                type: stack
+                gap: 4
+                padding: 12
+              children:
+                - id: twingate_pros_title
+                  component: heading
+                  props:
+                    text: "Pros"
+                    level: 6
+                - id: twingate_pro_1
+                  component: text
+                  props:
+                    text: "Managed service — no VPS needed"
+                - id: twingate_pro_2
+                  component: text
+                  props:
+                    text: "Free tier for personal use"
+                - id: twingate_pro_3
+                  component: text
+                  props:
+                    text: "Works as system-wide VPN on iOS"
+                - id: twingate_pro_4
+                  component: text
+                  props:
+                    text: "Zero-trust security model"

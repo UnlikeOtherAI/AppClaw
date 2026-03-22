@@ -33,6 +33,15 @@ page:
               props:
                 text: "Gateways"
                 level: 2
+            - id: help_btn
+              component: button
+              props:
+                label: ""
+                icon: circle-question
+                variant: ghost
+              interaction:
+                - type: navigation
+                  targetRoute: remote_access_help
             - id: add_gateway_btn
               component: button
               props:

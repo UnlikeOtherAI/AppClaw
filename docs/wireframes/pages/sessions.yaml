@@ -41,6 +41,9 @@ page:
                 label: ""
                 icon: plus
                 variant: ghost
+              interaction:
+                - type: open_overlay
+                  targetOverlay: new_session_sheet
 
         # Search bar
         - id: search_bar
@@ -135,6 +138,10 @@ page:
                       component: text
                       props:
                         text: "Here's the SwiftUI implementation plan for the..."
+                    - id: s1_gateway
+                      component: text
+                      props:
+                        text: "Home Gateway"
 
             - id: session_2
               component: section
@@ -180,6 +187,10 @@ page:
                       component: text
                       props:
                         text: "The connection keeps dropping because the keep-alive..."
+                    - id: s2_gateway
+                      component: text
+                      props:
+                        text: "Cloud Gateway"
 
             - id: session_3
               component: section
@@ -225,6 +236,10 @@ page:
                       component: text
                       props:
                         text: "v2.1.0 release notes: Added support for multi-agent..."
+                    - id: s3_gateway
+                      component: text
+                      props:
+                        text: "Home Gateway"
 
             - id: session_4
               component: section
@@ -270,3 +285,54 @@ page:
                       component: text
                       props:
                         text: "I've set up the cron job to run every Saturday at..."
+                    - id: s4_gateway
+                      component: text
+                      props:
+                        text: "Office Gateway"
+
+  overlays:
+    - id: new_session_sheet
+      type: bottom_sheet
+      content:
+        - id: ns_title
+          component: heading
+          props:
+            text: "New Session"
+            level: 4
+        - id: ns_gateway_label
+          component: text
+          props:
+            text: "Select Gateway"
+        - id: ns_gateway_select
+          component: select
+          props:
+            label: "Gateway"
+            placeholder: "Choose a gateway..."
+            options:
+              - { value: "home", label: "Home Gateway" }
+              - { value: "cloud", label: "Cloud Gateway" }
+              - { value: "office", label: "Office Gateway" }
+        - id: ns_spacer
+          component: spacer
+          size:
+            height: 12
+        - id: ns_message_input
+          component: input
+          props:
+            label: "First Message (optional)"
+            placeholder: "Start a conversation..."
+            type: text
+        - id: ns_spacer_2
+          component: spacer
+          size:
+            height: 16
+        - id: ns_create_btn
+          component: button
+          props:
+            label: "Create Session"
+            variant: primary
+          size:
+            width: "100%"
+          interaction:
+            - type: close_overlay
+              targetOverlay: new_session_sheet
